@@ -9,7 +9,7 @@ use crate::DayType;
 
 #[derive(new, Serialize, Deserialize, Debug, Clone)]
 pub struct Effective {
-    pub target_day_type: Option<DayType>,
+    // pub target_day_type: Option<DayType>,
     pub timezone: String,
     pub start_datetime: NaiveTime,
     pub end_datetime: NaiveTime,
@@ -98,7 +98,6 @@ mod tests {
     #[test]
     fn it_works() {
         let a = Effective::new(
-            Some(DayType::All),
             String::from("+0900"),
             NaiveTime::from_hms_opt(23, 0, 0).unwrap(),
             NaiveTime::from_hms_opt(1, 0, 0).unwrap(),
